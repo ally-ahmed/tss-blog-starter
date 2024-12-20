@@ -22,6 +22,7 @@
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.4",
+    "babel-plugin-react-compiler": "19.0.0-beta-201e55d-20241215",
     "typescript": "^5.7.2",
     "unenv": "^1.10.0",
     "wrangler": "^3.99.0"

@@ -9,4 +9,16 @@ export default defineConfig({
       external: ["node:async_hooks"],
     },
   },
+  react: {
+    babel: {
+      plugins: [
+        [
+          "babel-plugin-react-compiler",
+          {
+            target: "19",
+          },
+        ],
+      ],
+    },
+  },
 });
