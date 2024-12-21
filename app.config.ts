@@ -1,5 +1,7 @@
 import { defineConfig } from "@tanstack/start/config";
 import { cloudflare } from "unenv";
+import viteTsConfigPaths from "vite-tsconfig-paths";
+import type { PluginOption } from "vite";
 
 export default defineConfig({
   server: {
@@ -8,6 +10,14 @@ export default defineConfig({
     rollupConfig: {
       external: ["node:async_hooks"],
     },
+  },
+  vite: {
+    plugins: [
+      // this is the plugin that enables path aliases
+      viteTsConfigPaths({
+        projects: ["./tsconfig.json"],
+      }),
+    ],
   },
   react: {
     babel: {

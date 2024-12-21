@@ -2,7 +2,8 @@
 
 #### TODO
 
-- [ ] React 19
+- [x] React 19 & compiler
+- [ ] Path alias
 - [ ] Tailwind
 - [ ] Custom Font
 - [ ] Content collections i.e. MDX

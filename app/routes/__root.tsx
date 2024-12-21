@@ -6,8 +6,8 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
-import { DefaultCatchBoundary } from "../components/DefaultCatchBoundary";
-import { NotFound } from "../components/NotFound";
+import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
+import { NotFound } from "@/components/NotFound";
 
 export const Route = createRootRoute({
   head: () => ({
