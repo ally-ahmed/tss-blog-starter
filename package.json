@@ -14,8 +14,8 @@
   "license": "ISC",
   "dependencies": {
     "@radix-ui/react-slot": "^1.1.1",
-    "@tanstack/react-router": "^1.91.3",
-    "@tanstack/start": "^1.91.3",
+    "@tanstack/react-router": "^1.92.1",
+    "@tanstack/start": "^1.92.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
