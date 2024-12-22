@@ -8,6 +8,7 @@ import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
+import globalStyle from "@/styles/globals.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -21,6 +22,12 @@ export const Route = createRootRoute({
       },
       {
         title: "TanStack Start Starter",
+      },
+    ],
+    links: [
+      {
+        rel: "stylesheet",
+        href: globalStyle,
       },
     ],
   }),
