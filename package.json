@@ -26,6 +26,9 @@
     "vinxi": "^0.5.1"
   },
   "devDependencies": {
+    "@content-collections/core": "^0.8.0",
+    "@content-collections/mdx": "^0.2.0",
+    "@content-collections/vite": "^0.2.3",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.4",
@@ -35,6 +38,7 @@
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.2",
     "unenv": "^1.10.0",
+    "vite": "^6.0.5",
     "vite-tsconfig-paths": "^5.1.4",
     "wrangler": "^3.99.0"
   }

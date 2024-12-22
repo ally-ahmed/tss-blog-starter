@@ -133,3 +133,7 @@ db.sqlite
 
 # production
 /build
+
+# content-collections
+.content-collections
+
