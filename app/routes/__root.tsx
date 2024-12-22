@@ -9,9 +9,10 @@ import type { ReactNode } from "react";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
 import globalStyle from "@/styles/globals.css?url";
-import fontsourceInter from "@fontsource-variable/inter?url";
-import calSans from "cal-sans?url";
-// import "@fontsource-variable/inter";
+// import fontsourceInter from "@fontsource-variable/inter?url";
+// import calSans from "cal-sans?url";
+import "@fontsource-variable/inter";
+import "cal-sans";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -32,15 +33,14 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: globalStyle,
       },
-      {
-        rel: "stylesheet",
-        href: fontsourceInter,
-      },
-      {
-        rel: "preload",
-        href: calSans,
-        as: "font",
-      },
+      // {
+      //   rel: "stylesheet",
+      //   href: fontsourceInter,
+      // },
+      // {
+      //   rel: "stylesheet",
+      //   href: calSans,
+      // },
     ],
   }),
   errorComponent: (props) => {
