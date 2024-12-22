@@ -9,7 +9,8 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <main>
-      <h1 className="">Hello World</h1>
+      <h1 className="font-heading">Hello World</h1>
+      <p>Another paragraph</p>
       <Button>My Button</Button>
       <ul>
         {allPosts.map((post) => (

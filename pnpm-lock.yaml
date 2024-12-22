@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  '@fontsource-variable/inter':
+    specifier: ^5.1.0
+    version: 5.1.0
   '@radix-ui/react-slot':
     specifier: ^1.1.1
     version: 1.1.1(@types/react@19.0.2)(react@19.0.0)
@@ -14,6 +17,9 @@ dependencies:
   '@tanstack/start':
     specifier: ^1.92.1
     version: 1.92.1(react-dom@19.0.0)(react@19.0.0)(typescript@5.7.2)(vite@6.0.5)
+  cal-sans:
+    specifier: ^1.0.1
+    version: 1.0.1
   class-variance-authority:
     specifier: ^0.7.1
     version: 0.7.1
@@ -1695,6 +1701,10 @@ packages:
     engines: {node: '>=14'}
     dev: true
 
+  /@fontsource-variable/inter@5.1.0:
+    resolution: {integrity: sha512-Wj2dUGP0vUpxRGQTXQTCNJO+aLcFcQm+gUPXfj/aS877bQkEPBPv9JvZJpwdm2vzelt8NTZ+ausKlBCJjh2XIg==}
+    dev: false
+
   /@ioredis/commands@1.2.0:
     resolution: {integrity: sha512-Sx1pU8EM64o2BrqNpEO1CNLtKQwyhuXuqyfH7oGKCk+1a33d2r5saW8zNwm3j6BTExtjrv2BxTgzzkMwts6vGg==}
     dev: false
@@ -3089,6 +3099,10 @@ packages:
       perfect-debounce: 1.0.0
       pkg-types: 1.2.1
       rc9: 2.1.2
+    dev: false
+
+  /cal-sans@1.0.1:
+    resolution: {integrity: sha512-XwN3/7jez8WmFVcNnNqO2K9lh133KiIcURCyGFnSM+ZmNZ8zIcOTNfr3SpenLAkRceYsq+fQNX/PL4C1rIkEPQ==}
     dev: false
 
   /camelcase-css@2.0.1:

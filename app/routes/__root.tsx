@@ -9,6 +9,9 @@ import type { ReactNode } from "react";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
 import globalStyle from "@/styles/globals.css?url";
+import fontsourceInter from "@fontsource-variable/inter?url";
+import calSans from "cal-sans?url";
+// import "@fontsource-variable/inter";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -28,6 +31,14 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: globalStyle,
+      },
+      {
+        rel: "stylesheet",
+        href: fontsourceInter,
+      },
+      {
+        rel: "stylesheet",
+        href: calSans,
       },
     ],
   }),
@@ -52,11 +63,11 @@ function RootComponent() {
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html>
+    <html lang="en" suppressHydrationWarning>
       <head>
         <Meta />
       </head>
-      <body>
+      <body className="min-h-screen bg-background font-sans antialiased">
         {children}
         <ScrollRestoration />
         <Scripts />
