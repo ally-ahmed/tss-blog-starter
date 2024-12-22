@@ -1,3 +1,6 @@
+@import "@fontsource-variable/inter";
+@import "cal-sans";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
