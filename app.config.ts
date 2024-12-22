@@ -1,7 +1,6 @@
 import { defineConfig } from "@tanstack/start/config";
 import { cloudflare } from "unenv";
 import viteTsConfigPaths from "vite-tsconfig-paths";
-import type { PluginOption } from "vite";
 
 export default defineConfig({
   server: {
