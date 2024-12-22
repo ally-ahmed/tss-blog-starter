@@ -9,7 +9,9 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <main>
-      <h1 className="font-heading">Hello World</h1>
+      <h1 className="inline-block font-heading text-4xl tracking-tight lg:text-5xl">
+        Hello World
+      </h1>
       <p>Another paragraph</p>
       <Button>My Button</Button>
       <ul>
