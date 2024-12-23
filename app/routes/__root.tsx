@@ -10,7 +10,7 @@ import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
 import globalStyle from "@/styles/globals.css?url";
 import fontsourceInter from "@fontsource-variable/inter?url";
-import calSans from "cal-sans?url";
+// import calSans from "cal-sans?url";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -36,8 +36,9 @@ export const Route = createRootRoute({
         href: fontsourceInter,
       },
       {
-        rel: "stylesheet",
-        href: calSans,
+        rel: "preload",
+        href: "/fonts/CalSans-SemiBold.ttf",
+        as: "font",
       },
     ],
   }),
