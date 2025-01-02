@@ -11,3 +11,7 @@
 - [ ] Eslint & prettier
 - [ ] OG image
 - [ ] Image optimisation
+- [ ] Font optimisation
+
+- rehype pretty code higligh not working anymore we should use shiki transforners https://github.com/rehype-pretty/rehype-pretty-code/issues/238 https://shiki.style/packages/transformers#transformernotationhighlight
+- shiki can do focus, bracket colizer and diff

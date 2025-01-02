@@ -17,9 +17,9 @@ function Home() {
       <ul>
         {allPosts.map((post) => (
           <li key={post._meta.path}>
-            <a href={`/posts/${post._meta.path}`}>
+            <a href={`/blog/${post._meta.path}`}>
               <h3>{post.title}</h3>
-              <p>{post.summary}</p>
+              <p>{post.description}</p>
             </a>
           </li>
         ))}

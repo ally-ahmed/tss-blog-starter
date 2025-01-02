@@ -67,7 +67,9 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased">
-        {children}
+        <div className="flex min-h-screen flex-col">
+          <div className="container flex-1">{children}</div>
+        </div>
         <ScrollRestoration />
         <Scripts />
       </body>
