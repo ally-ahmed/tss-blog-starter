@@ -5,10 +5,14 @@ import contentCollections from "@content-collections/vite";
 
 export default defineConfig({
   server: {
-    preset: "cloudflare-pages",
+    preset: "cloudflare-pages-static",
     unenv: cloudflare,
     rollupConfig: {
       external: ["node:async_hooks"],
+    },
+    prerender: {
+      routes: ["/"],
+      crawlLinks: true,
     },
   },
   vite: {

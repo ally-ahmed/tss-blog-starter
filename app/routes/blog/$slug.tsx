@@ -9,7 +9,10 @@ import { getTableOfContents } from "@/lib/toc";
 import { TableOfContents } from "@/components/toc";
 
 export const Route = createFileRoute("/blog/$slug")({
-  loader: async ({ params }) => {
+  beforeLoad: () => ({
+    allPosts,
+  }),
+  loader: async ({ params, context: { allPosts } }) => {
     const slug = params.slug;
     const post = allPosts.find((post) => post._meta.path === slug);
     if (!post) {
