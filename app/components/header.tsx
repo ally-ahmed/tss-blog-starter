@@ -4,8 +4,9 @@ import { MainNav } from "@/components/main-nav";
 export function Header() {
   return (
     <>
-      <MainNav className="hidden md:block" />
-      <MobileNav className="md:hidden" />
+      <MainNav className="" />
+      {/* TODO: */}
+      {/* <MobileNav className="md:hidden" /> */}
     </>
   );
 }
