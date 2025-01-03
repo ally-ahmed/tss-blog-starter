@@ -7,6 +7,7 @@ import { cn, formatDate } from "@/lib/utils";
 import { ChevronLeft } from "lucide-react";
 import { getTableOfContents } from "@/lib/toc";
 import { TableOfContents } from "@/components/toc";
+import { seo } from "@/lib/seo";
 
 export const Route = createFileRoute("/blog/$slug")({
   beforeLoad: () => ({
@@ -24,7 +25,15 @@ export const Route = createFileRoute("/blog/$slug")({
     const toc = await getTableOfContents(post.content);
     return { post, toc };
   },
-  head: () => ({
+  head: ({ loaderData }) => ({
+    meta: loaderData
+      ? [
+          ...seo({
+            title: `${loaderData?.post.title} | TSS Blog Starter`,
+            description: loaderData?.post.description,
+          }),
+        ]
+      : [],
     links: [
       {
         rel: "stylesheet",

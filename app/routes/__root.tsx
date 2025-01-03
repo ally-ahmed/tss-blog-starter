@@ -14,6 +14,7 @@ import fontsourceInter from "@fontsource-variable/inter?url";
 import calSans from "cal-sans?url";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
+import { seo } from "@/lib/seo";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -28,6 +29,12 @@ export const Route = createRootRoute({
       {
         title: "TanStack Start Starter",
       },
+      ...seo({
+        title: "TanStack Start Blog Starter",
+        description: "A blog starter template built using Tanstack Start",
+        keywords:
+          "tanstack,react,reactjs,,open source,open source software,oss,software, blog, starter, tanstack start, tailwind",
+      }),
     ],
     links: [
       {
@@ -46,6 +53,25 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: calSans,
       },
+      {
+        rel: "apple-touch-icon",
+        sizes: "180x180",
+        href: "/apple-touch-icon.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "32x32",
+        href: "/favicon-32x32.png",
+      },
+      {
+        rel: "icon",
+        type: "image/png",
+        sizes: "16x16",
+        href: "/favicon-16x16.png",
+      },
+      { rel: "manifest", href: "/site.webmanifest", color: "#fffff" },
+      { rel: "icon", href: "/favicon.ico" },
     ],
   }),
   errorComponent: (props) => {

@@ -1,4 +1,4 @@
 name = "tss-basic"
 compatibility_date = "2024-11-12"
-compatibility_flags = ["nodejs_compat_v2"]
+compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = "./dist"
