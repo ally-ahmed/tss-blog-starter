@@ -7,12 +7,14 @@
 - [x] Tailwind
 - [x] Custom Font
 - [x] Content collections i.e. MDX
+- [ ] Page designs
+- [ ] Rename Repo
 - [ ] SEO meta tags
-- [ ] Theme
 - [ ] Eslint & prettier
-- [ ] OG image
-- [ ] Image optimisation
+- [ ] Theme
 - [ ] Font optimisation
+- [ ] Image optimisation
+- [ ] Dynamic OG image
 
 - rehype pretty code higligh not working anymore we should use shiki transforners https://github.com/rehype-pretty/rehype-pretty-code/issues/238 https://shiki.style/packages/transformers#transformernotationhighlight
 - shiki can do focus, bracket colizer and diff
