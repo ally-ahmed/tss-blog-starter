@@ -9,7 +9,8 @@
 - [x] Content collections i.e. MDX
 - [🚧] Page designs
 - [x] Rename Repo
-- [ ] SEO meta tags
+- [x] SEO meta tags
+- [ ] tailwind dimensions helper
 - [ ] Dynamic OG image
 - [ ] Theme
 - [ ] Eslint & prettier
