@@ -50,11 +50,12 @@ function RouteComponent() {
           <ChevronLeft className="mr-2 h-4 w-4" />
           See all posts
         </Link>
-        <div className="hidden text-sm xl:block">
-          <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
-            <TableOfContents toc={toc} />
-          </div>
-        </div>
+        {/* TODO:  */}
+        {/* <div className="hidden text-sm xl:block"> */}
+        {/*   <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10"> */}
+        {/*     <TableOfContents toc={toc} /> */}
+        {/*   </div> */}
+        {/* </div> */}
         <div>
           {post.publishedAt && (
             <time
@@ -76,11 +77,6 @@ function RouteComponent() {
             <ChevronLeft className="mr-2 h-4 w-4" />
             See all posts
           </Link>
-        </div>
-        <div className="hidden text-sm xl:block">
-          <div className="sticky top-16 -mt-10 max-h-[calc(var(--vh)-4rem)] overflow-y-auto pt-10">
-            <TableOfContents toc={toc} />
-          </div>
         </div>
       </article>
     </section>

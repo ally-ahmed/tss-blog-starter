@@ -16,6 +16,7 @@ export function formatDate(input: string | number): string {
   });
 }
 
+// FIX: toSorted not working on cloudflare
 export const sortedPosts = allPosts.sort(
   (a, b) =>
     new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
