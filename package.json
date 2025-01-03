@@ -1,17 +1,16 @@
 {
-  "name": "tss-basic",
+  "name": "tss-blog-starter",
   "version": "1.0.0",
   "description": "",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",
     "build": "vinxi build",
-    "start": "vinxi start",
-    "preview": "node .output/server/index.mjs"
+    "start": "vinxi start"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.1",
     "@radix-ui/react-slot": "^1.1.1",
