@@ -16,7 +16,7 @@ export function formatDate(input: string | number): string {
   });
 }
 
-export const sortedPosts = allPosts.sort(
+export const sortedPosts = allPosts.toSorted(
   (a, b) =>
     new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
 );
