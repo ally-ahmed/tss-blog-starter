@@ -23,3 +23,7 @@ Acknowledgements
 
 - vercel blog starter
 - Taxonomy
+
+Questions
+
+- `toSorted` not working on cloudflare i get Ie.toSorted is not a function
