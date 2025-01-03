@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button";
-import { createFileRoute, useRouter } from "@tanstack/react-router";
-import { allPosts } from "content-collections";
+import { BlogList } from "@/components/blog-list";
+import { sortedPosts } from "@/lib/utils";
+import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -8,22 +8,19 @@ export const Route = createFileRoute("/")({
 
 function Home() {
   return (
-    <main>
-      <h1 className="inline-block font-heading text-4xl tracking-tight lg:text-5xl">
-        Hello World
-      </h1>
-      <p>Another paragraph</p>
-      <Button>My Button</Button>
-      <ul>
-        {allPosts.map((post) => (
-          <li key={post._meta.path}>
-            <a href={`/blog/${post._meta.path}`}>
-              <h3>{post.title}</h3>
-              <p>{post.description}</p>
-            </a>
-          </li>
-        ))}
-      </ul>
-    </main>
+    <section>
+      <h3 className="mb-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+        About
+      </h3>
+      <p className="mb-4 text-balance">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum
+        voluptates id, tenetur ad, consectetur quasi, distinctio nulla quos a
+        voluptatem non quis velit! Eius illo, nesciunt tempora in et hic! Lorem,
+        ipsum dolor sit amet consectetur adipisicing elit. Ipsam ullam quis ab
+        earum, eveniet excepturi accusamus culpa animi ipsum, labore facilis
+        iure asperiores corrupti dolores, dolorem fuga sed debitis ex!
+      </p>
+      <BlogList posts={sortedPosts} />
+    </section>
   );
 }

@@ -1,6 +1,8 @@
 import { clsx, type ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 
+import { allPosts } from "content-collections";
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
 }
@@ -13,3 +15,9 @@ export function formatDate(input: string | number): string {
     year: "numeric",
   });
 }
+
+export const sortedPosts = allPosts.toSorted(
+  (a, b) =>
+    new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
+);
+export type Posts = typeof allPosts;
