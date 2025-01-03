@@ -9,6 +9,7 @@ import type { ReactNode } from "react";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
 import globalStyle from "@/styles/globals.css?url";
+import mdxStyle from "@/styles/globals.css?url";
 import fontsourceInter from "@fontsource-variable/inter?url";
 import calSans from "cal-sans?url";
 import { Header } from "@/components/header";
@@ -32,6 +33,10 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: globalStyle,
+      },
+      {
+        rel: "stylesheet",
+        href: mdxStyle,
       },
       {
         rel: "stylesheet",
