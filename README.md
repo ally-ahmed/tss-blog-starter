@@ -1,4 +1,4 @@
-# TSS Basic
+# TSS Blog Starter
 
 #### TODO
 
