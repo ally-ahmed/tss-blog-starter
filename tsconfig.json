@@ -17,7 +17,7 @@
     "checkJs": true,
 
     /* Bundled projects */
-    "lib": ["ESNext", "dom", "dom.iterable", "ES2023.Array"],
+    "lib": ["ESNext", "dom", "dom.iterable", "ES2024.Array"],
     "module": "preserve",
     "noEmit": true,
     "jsx": "react-jsx",
