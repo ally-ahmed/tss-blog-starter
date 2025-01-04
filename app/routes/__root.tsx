@@ -33,7 +33,7 @@ export const Route = createRootRoute({
       },
       ...seo({
         title: "TanStack Start Blog Starter",
-        description: "A blog starter template built using Tanstack Start",
+        description: "A blog starter template built using TanStack Start",
         image: ogImage,
         keywords:
           "tanstack,react,reactjs,,open source,open source software,oss,software, blog, starter, tanstack start, tailwind",
