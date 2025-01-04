@@ -1,6 +1,8 @@
 import { BlogList } from "@/components/blog-list";
+import { Button } from "@/components/ui/button";
 import { sortedPosts } from "@/lib/utils";
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+import { Github, Star } from "lucide-react";
 
 export const Route = createFileRoute("/")({
   component: Home,
@@ -20,6 +22,13 @@ function Home() {
         earum, eveniet excepturi accusamus culpa animi ipsum, labore facilis
         iure asperiores corrupti dolores, dolorem fuga sed debitis ex!
       </p>
+      <Button size="sm" asChild>
+        <a href="https://github.com/ally-ahmed/tss-blog-starter">
+          <Github />
+          Star on Github <Star />
+        </a>
+      </Button>
+
       <BlogList posts={sortedPosts} />
     </section>
   );

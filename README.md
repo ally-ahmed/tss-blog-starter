@@ -2,19 +2,15 @@
 
 #### TODO
 
-- [x] React 19 & compiler
-- [x] Path alias
-- [x] Tailwind
-- [x] Custom Font
-- [x] Content collections i.e. MDX
-- [🚧] Page designs
-- [x] Rename Repo
-- [x] SEO meta tags
-- [ ] tailwind dimensions helper
+- [ ] update README
+- [ ] og image
+- [x] Remove mobile menu
+- [x] Update demo url
+- [x] Screen size component
 - [ ] Dynamic OG image
 - [ ] Theme
 - [ ] Eslint & prettier
-- [ ] Font optimisation
+- [ ] Font optimisation - font causing CLS
 - [ ] Image optimisation
 
 - rehype pretty code higligh not working anymore we should use shiki transforners https://github.com/rehype-pretty/rehype-pretty-code/issues/238 https://shiki.style/packages/transformers#transformernotationhighlight
@@ -24,7 +20,4 @@ Acknowledgements
 
 - vercel blog starter
 - Taxonomy
-
-Questions
-
-- `toSorted` not working on cloudflare i get Ie.toSorted is not a function
+- [Orc Dev screen size component](https://www.orcdev.com/components/screen-size)

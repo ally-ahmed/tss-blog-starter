@@ -15,6 +15,8 @@ import calSans from "cal-sans?url";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { seo } from "@/lib/seo";
+import { ScreenSize } from "@/components/screen-size";
+import ogImage from "@/images/og.png";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -32,6 +34,7 @@ export const Route = createRootRoute({
       ...seo({
         title: "TanStack Start Blog Starter",
         description: "A blog starter template built using Tanstack Start",
+        image: ogImage,
         keywords:
           "tanstack,react,reactjs,,open source,open source software,oss,software, blog, starter, tanstack start, tailwind",
       }),
@@ -105,6 +108,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
           {children}
           <Footer />
         </main>
+        <ScreenSize />
         <ScrollRestoration />
         <Scripts />
       </body>
