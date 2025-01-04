@@ -23,7 +23,10 @@ function Home() {
         iure asperiores corrupti dolores, dolorem fuga sed debitis ex!
       </p>
       <Button size="sm" asChild>
-        <a href="https://github.com/ally-ahmed/tss-blog-starter">
+        <a
+          href="https://github.com/ally-ahmed/tss-blog-starter"
+          target="_blank"
+        >
           <Github />
           Star on Github <Star />
         </a>
