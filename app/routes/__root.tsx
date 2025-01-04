@@ -29,10 +29,10 @@ export const Route = createRootRoute({
         content: "width=device-width, initial-scale=1",
       },
       {
-        title: "TanStack Start Starter",
+        title: "Tanstack Start Starter",
       },
       ...seo({
-        title: "TanStack Start Blog Starter",
+        title: "Tanstack Start Blog Starter",
         description: "A blog starter template built using Tanstack Start",
         image: ogImage,
         keywords:
