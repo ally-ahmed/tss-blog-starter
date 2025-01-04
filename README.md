@@ -1,6 +1,6 @@
 # TSS Blog Starter 🏝️
 
-A blog/portfolio starter project built with Tanstack Start.
+A blog/portfolio starter project built with TanStack Start.
 
 ![demo](./demo.png)
 
@@ -10,7 +10,7 @@ https://tss-blog-starter.pages.dev/
 
 ## Tech
 
-- [Tanstack Start](https://tanstack.com/router/latest/docs/framework/react/guide/tanstack-start#tanstack-start)
+- [TanStack Start](https://tanstack.com/router/latest/docs/framework/react/guide/tanstack-start#tanstack-start)
 - [Tailwind CSS](https://tailwindcss.com)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Content Collections](https://www.content-collections.dev/)
@@ -46,7 +46,7 @@ pnpm dev
 
 ## Deployment
 
-Currently using cloudflare as the deployment target in `tss-blog-starter`. To deploy to other targets see [Tanstack Start docs on deployment](https://tanstack.com/router/latest/docs/framework/react/start/hosting#deployment).
+Currently using cloudflare as the deployment target in `tss-blog-starter`. To deploy to other targets see [TanStack Start docs on deployment](https://tanstack.com/router/latest/docs/framework/react/start/hosting#deployment).
 
 ## Roadmap
 
