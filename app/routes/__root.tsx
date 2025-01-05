@@ -7,12 +7,12 @@ import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
-import globalStyle from "@/styles/globals.css?url";
 import "@/styles/globals.css";
-import fontsourceInter from "@fontsource-variable/inter?url";
+import globalStyle from "@/styles/globals.css?url";
 import "@fontsource-variable/inter";
-import calSans from "cal-sans?url";
+import fontsourceInter from "@fontsource-variable/inter?url";
 import "cal-sans";
+import calSans from "cal-sans?url";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { seo } from "@/lib/seo";
@@ -65,14 +65,14 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: globalStyle,
       },
-      // {
-      //   rel: "stylesheet",
-      //   href: fontsourceInter,
-      // },
-      // {
-      //   rel: "stylesheet",
-      //   href: calSans,
-      // },
+      {
+        rel: "stylesheet",
+        href: fontsourceInter,
+      },
+      {
+        rel: "stylesheet",
+        href: calSans,
+      },
     ],
   }),
   errorComponent: (props) => {
