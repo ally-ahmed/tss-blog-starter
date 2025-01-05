@@ -65,10 +65,10 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: globalStyle,
       },
-      {
-        rel: "stylesheet",
-        href: fontsourceInter,
-      },
+      // {
+      //   rel: "stylesheet",
+      //   href: fontsourceInter,
+      // },
       // {
       //   rel: "stylesheet",
       //   href: calSans,
