@@ -8,15 +8,15 @@ import type { ReactNode } from "react";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
 import globalStyle from "@/styles/globals.css?url";
-import mdxStyle from "@/styles/globals.css?url";
-import fontsourceInter from "@fontsource-variable/inter?url";
-import calSans from "cal-sans?url";
+import "@/styles/globals.css";
+// import fontsourceInter from "@fontsource-variable/inter?url";
+// import calSans from "cal-sans?url";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { seo } from "@/lib/seo";
 import { ScreenSize } from "@/components/screen-size";
 import ogImage from "@/images/og.png";
-import { ThemeProvider } from "next-themes";
+import { ThemeProvider } from "@/components/theme-provider";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -41,22 +41,6 @@ export const Route = createRootRoute({
     ],
     links: [
       {
-        rel: "stylesheet",
-        href: globalStyle,
-      },
-      {
-        rel: "stylesheet",
-        href: mdxStyle,
-      },
-      // {
-      //   rel: "stylesheet",
-      //   href: fontsourceInter,
-      // },
-      // {
-      //   rel: "stylesheet",
-      //   href: calSans,
-      // },
-      {
         rel: "apple-touch-icon",
         sizes: "180x180",
         href: "/apple-touch-icon.png",
@@ -75,6 +59,18 @@ export const Route = createRootRoute({
       },
       { rel: "manifest", href: "/site.webmanifest", color: "#fffff" },
       { rel: "icon", href: "/favicon.ico" },
+      {
+        rel: "stylesheet",
+        href: globalStyle,
+      },
+      // {
+      //   rel: "stylesheet",
+      //   href: fontsourceInter,
+      // },
+      // {
+      //   rel: "stylesheet",
+      //   href: calSans,
+      // },
     ],
   }),
   errorComponent: (props) => {
@@ -103,7 +99,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+        <ThemeProvider defaultTheme="system">
           <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
             <Header />
             {children}

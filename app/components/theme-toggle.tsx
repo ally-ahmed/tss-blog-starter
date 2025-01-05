@@ -1,11 +1,9 @@
-// import { useTheme } from "@/components/theme";
-import { useTheme } from "next-themes";
+import { useTheme } from "@/components/theme-provider";
 
 import { Button } from "@/components/ui/button";
 import { Sun, Moon } from "lucide-react";
 
 export const ThemeToggle = () => {
-  // const theme = useTheme();
   const { setTheme, theme } = useTheme();
 
   return (
