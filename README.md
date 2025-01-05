@@ -8,6 +8,16 @@ A blog/portfolio starter project built with TanStack Start.
 
 https://tss-blog-starter.pages.dev/
 
+## Features
+
+- MDX and Markdown support
+- Syntax highlighting
+- Light/dark mode toggle
+- Tailwind CSS
+- Custom font
+- Dynamic OG images (coming soon)
+- Font optimisation (coming soon)
+
 ## Tech
 
 - [TanStack Start](https://tanstack.com/router/latest/docs/framework/react/guide/tanstack-start#tanstack-start)
@@ -50,7 +60,6 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 
 ## Roadmap
 
-- [ ] Theme
 - [ ] ES Lint & Prettier
 - [ ] Finish up `On this page` component
 - [ ] Maybe mobile nav using magic ui dock component
