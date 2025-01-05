@@ -2,10 +2,19 @@ import { useTheme } from "@/components/theme-provider";
 
 import { Button } from "@/components/ui/button";
 import { Sun, Moon } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export const ThemeToggle = () => {
-  const { setTheme, theme } = useTheme();
+  const [mounted, setMounted] = useState(false);
 
+  const { setTheme, theme } = useTheme();
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
   return (
     <Button
       variant="ghost"
