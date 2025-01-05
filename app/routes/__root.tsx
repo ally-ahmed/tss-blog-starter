@@ -17,6 +17,7 @@ import { Footer } from "@/components/footer";
 import { seo } from "@/lib/seo";
 import { ScreenSize } from "@/components/screen-size";
 import ogImage from "@/images/og.png";
+import { ThemeProvider } from "@/components/theme";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -103,11 +104,13 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 lg:mx-auto vsc-initialized">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
-          <Header />
-          {children}
-          <Footer />
-        </main>
+        <ThemeProvider>
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
+            <Header />
+            {children}
+            <Footer />
+          </main>
+        </ThemeProvider>
         <ScreenSize />
         <ScrollRestoration />
         <Scripts />

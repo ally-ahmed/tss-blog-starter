@@ -13,6 +13,7 @@
   "license": "MIT",
   "dependencies": {
     "@fontsource-variable/inter": "^5.1.1",
+    "@mantine/hooks": "^7.15.2",
     "@radix-ui/react-slot": "^1.1.1",
     "@tanstack/react-router": "^1.95.1",
     "@tanstack/start": "^1.95.1",
@@ -20,11 +21,13 @@
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^0.469.0",
+    "outdent": "^0.8.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "tailwind-merge": "^2.6.0",
     "tailwindcss-animate": "^1.0.7",
-    "vinxi": "^0.5.1"
+    "vinxi": "^0.5.1",
+    "zod": "^3.24.1"
   },
   "devDependencies": {
     "@content-collections/core": "^0.8.0",
