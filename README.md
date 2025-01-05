@@ -14,7 +14,7 @@ https://tss-blog-starter.pages.dev/
 - Syntax highlighting
 - Light/dark mode toggle
 - Tailwind CSS
-- Custom font
+- Custom fonts
 - Dynamic OG images (coming soon)
 - Font optimisation (coming soon)
 
