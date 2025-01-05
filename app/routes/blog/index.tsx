@@ -17,7 +17,7 @@ export const Route = createFileRoute("/blog/")({
 function RouteComponent() {
   return (
     <section>
-      <h3 className="mb-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mb-8 scroll-m-20 text-2xl font-semibold tracking-tight font-heading">
         My Blog
       </h3>
       <BlogList posts={sortedPosts} />

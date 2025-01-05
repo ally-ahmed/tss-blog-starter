@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
 function Home() {
   return (
     <section>
-      <h3 className="mb-8 scroll-m-20 text-2xl font-semibold tracking-tight">
+      <h3 className="mb-8 scroll-m-20 text-2xl font-semibold tracking-tight font-heading">
         About
       </h3>
       <p className="mb-4 text-balance">

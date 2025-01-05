@@ -9,8 +9,8 @@ import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
 import "@/styles/globals.css";
 import globalStyle from "@/styles/globals.css?url";
-import "@fontsource-variable/inter?url";
 import fontsourceInter from "@fontsource-variable/inter?url";
+import "@fontsource-variable/inter?url";
 import "cal-sans?url";
 import calSans from "cal-sans?url";
 import { Header } from "@/components/header";
@@ -69,10 +69,10 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: fontsourceInter,
       },
-      {
-        rel: "stylesheet",
-        href: calSans,
-      },
+      // {
+      //   rel: "stylesheet",
+      //   href: calSans,
+      // },
     ],
   }),
   errorComponent: (props) => {
