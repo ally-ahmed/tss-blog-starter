@@ -48,14 +48,14 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: mdxStyle,
       },
-      {
-        rel: "stylesheet",
-        href: fontsourceInter,
-      },
-      {
-        rel: "stylesheet",
-        href: calSans,
-      },
+      // {
+      //   rel: "stylesheet",
+      //   href: fontsourceInter,
+      // },
+      // {
+      //   rel: "stylesheet",
+      //   href: calSans,
+      // },
       {
         rel: "apple-touch-icon",
         sizes: "180x180",
