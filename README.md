@@ -14,7 +14,7 @@ https://tss-blog-starter.pages.dev/
 - Syntax highlighting
 - Light/dark mode toggle
 - Tailwind CSS
-- Custom fonts
+- Custom fonts (fixing React 19 hydration errors with this)
 - Dynamic OG images (coming soon)
 - Font optimisation (coming soon)
 
