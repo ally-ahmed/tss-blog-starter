@@ -10,10 +10,10 @@ export default defineConfig({
     rollupConfig: {
       external: ["node:async_hooks"],
     },
-    // prerender: {
-    //   routes: ["/"],
-    //   crawlLinks: true,
-    // },
+    prerender: {
+      routes: ["/"],
+      crawlLinks: true,
+    },
   },
   vite: {
     plugins: [
