@@ -10,7 +10,7 @@ import { NotFound } from "@/components/NotFound";
 import "@/styles/globals.css";
 import globalStyle from "@/styles/globals.css?url";
 // import fontsourceInter from "@fontsource-variable/inter?url";
-// import "@fontsource-variable/inter?url";
+// import "@fontsource-variable/inter";
 // import "cal-sans?url";
 // import calSans from "cal-sans?url";
 import { Header } from "@/components/header";
@@ -65,6 +65,13 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: globalStyle,
       },
+      // {
+      //   rel: "preload",
+      //   href: "/fonts/CalSans-SemiBold.ttf",
+      //   as: "font",
+      //   type: "font/ttf",
+      //   crossOrigin: "anonymous",
+      // },
       // {
       //   rel: "stylesheet",
       //   href: fontsourceInter,
