@@ -62,9 +62,8 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 
 - [ ] ES Lint & Prettier
 - [ ] Finish up `On this page` component
-- [ ] Maybe mobile nav using magic ui dock component
 - [ ] Dynamic OG image generation
-- [ ] Font optimisation - font change causing Cumulative Layout Shift (CLS)
+- [ ] Font optimisation - font change causing cumulative layout shift (CLS)
 - [ ] Image optimisation
 
 ## Acknowledgements
