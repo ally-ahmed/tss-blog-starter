@@ -7,12 +7,12 @@ import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { NotFound } from "@/components/NotFound";
-import "@/styles/globals.css";
+// import "@/styles/globals.css";
 import globalStyle from "@/styles/globals.css?url";
-// import fontsourceInter from "@fontsource-variable/inter?url";
+import fontsourceInter from "@fontsource-variable/inter?url";
 // import "@fontsource-variable/inter";
 // import "cal-sans?url";
-// import calSans from "cal-sans?url";
+import calSans from "cal-sans?url";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { seo } from "@/lib/seo";
@@ -72,14 +72,14 @@ export const Route = createRootRoute({
       //   type: "font/ttf",
       //   crossOrigin: "anonymous",
       // },
-      // {
-      //   rel: "stylesheet",
-      //   href: fontsourceInter,
-      // },
-      // {
-      //   rel: "stylesheet",
-      //   href: calSans,
-      // },
+      {
+        rel: "stylesheet",
+        href: fontsourceInter,
+      },
+      {
+        rel: "stylesheet",
+        href: calSans,
+      },
     ],
   }),
   errorComponent: (props) => {
@@ -108,7 +108,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <ThemeProvider defaultTheme="light">
+        <ThemeProvider defaultTheme="system">
           <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
             <Header />
             {children}
