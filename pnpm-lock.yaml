@@ -29,6 +29,9 @@ dependencies:
   lucide-react:
     specifier: ^0.470.0
     version: 0.470.0(react@18.3.1)
+  next-themes:
+    specifier: ^0.4.4
+    version: 0.4.4(react-dom@18.3.1)(react@18.3.1)
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -8064,6 +8067,16 @@ packages:
     resolution: {integrity: sha512-kKHJhxwpR/Okycz4HhQKKlhWe4ASEfPgkSWNmKFHd7+ezuQlxkA5cM3+XkBPvm1gmHen3w53qsYAv+8GwRrBlg==}
     engines: {node: '>=18'}
     dev: true
+
+  /next-themes@0.4.4(react-dom@18.3.1)(react@18.3.1):
+    resolution: {integrity: sha512-LDQ2qIOJF0VnuVrrMSMLrWGjRMkq+0mpgl6e0juCLqdJ+oo8Q84JRWT6Wh11VDQKkMMe+dVzDKLWs5n87T+PkQ==}
+    peerDependencies:
+      react: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+      react-dom: ^16.8 || ^17 || ^18 || ^19 || ^19.0.0-rc
+    dependencies:
+      react: 18.3.1
+      react-dom: 18.3.1(react@18.3.1)
+    dev: false
 
   /nitropack@2.10.4(typescript@5.7.3):
     resolution: {integrity: sha512-sJiG/MIQlZCVSw2cQrFG1H6mLeSqHlYfFerRjLKz69vUfdu0EL2l0WdOxlQbzJr3mMv/l4cOlCCLzVRzjzzF/g==}
