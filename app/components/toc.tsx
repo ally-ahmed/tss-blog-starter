@@ -1,22 +1,23 @@
 import * as React from "react";
 
 import type { TableOfContents } from "@/lib/toc";
-import { cn } from "@/lib/utils";
+
 import { useMounted } from "@/hooks/use-mounted";
+import { cn } from "@/lib/utils";
 
 interface TocProps {
   toc: TableOfContents;
 }
 
-export function TableOfContents({ toc }: TocProps) {
+export function TOC({ toc }: TocProps) {
   const itemIds = React.useMemo(
     () =>
       toc.items
         ? toc.items
-            .flatMap((item) => [item.url, item?.items?.map((item) => item.url)])
+            .flatMap(item => [item.url, item?.items?.map(item => item.url)])
             .flat()
             .filter(Boolean)
-            .map((id) => id?.split("#")[1])
+            .map(id => id?.split("#")[1])
         : [],
     [toc],
   );

@@ -1,24 +1,26 @@
-import {
-  Outlet,
-  ScrollRestoration,
-  createRootRoute,
-} from "@tanstack/react-router";
-import { Meta, Scripts } from "@tanstack/start";
 import type { ReactNode } from "react";
-import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
-import { NotFound } from "@/components/NotFound";
+
+import ogImage from "@/images/og.png";
 // import "@/styles/globals.css";
 import globalStyle from "@/styles/globals.css?url";
 import fontsourceInter from "@fontsource-variable/inter?url";
+import {
+  createRootRoute,
+  Outlet,
+  ScrollRestoration,
+} from "@tanstack/react-router";
+import { Meta, Scripts } from "@tanstack/start";
+import calSans from "cal-sans?url";
+
+import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 // import "@fontsource-variable/inter";
 // import "cal-sans?url";
-import calSans from "cal-sans?url";
-import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
-import { seo } from "@/lib/seo";
+import { Header } from "@/components/header";
+import { NotFound } from "@/components/NotFound";
 import { ScreenSize } from "@/components/screen-size";
-import ogImage from "@/images/og.png";
 import { ThemeProvider } from "@/components/theme-provider";
+import { seo } from "@/lib/seo";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -115,7 +117,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
             <Footer />
           </main>
         </ThemeProvider>
-        <ScreenSize />
+        {!import.meta.env.PROD ? <ScreenSize /> : null}
         <ScrollRestoration />
         <Scripts />
       </body>

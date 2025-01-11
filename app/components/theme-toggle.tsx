@@ -1,10 +1,10 @@
+import { Moon, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+
 import { useTheme } from "@/components/theme-provider";
-
 import { Button } from "@/components/ui/button";
-import { Sun, Moon } from "lucide-react";
-import { useState, useEffect } from "react";
 
-export const ThemeToggle = () => {
+export function ThemeToggle() {
   const [mounted, setMounted] = useState(false);
 
   const { setTheme, theme } = useTheme();
@@ -26,4 +26,4 @@ export const ThemeToggle = () => {
       <span className="sr-only">Toggle theme</span>
     </Button>
   );
-};
+}

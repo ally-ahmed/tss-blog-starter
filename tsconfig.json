@@ -1,36 +1,43 @@
 {
   "compilerOptions": {
-    /* Base Options: */
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "target": "ESNext",
-    "allowJs": true,
-    "resolveJsonModule": true,
-    "moduleDetection": "force",
-    "isolatedModules": true,
-    "verbatimModuleSyntax": true,
-
-    /* Strictness */
-    "strict": true,
-    "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true,
-    "checkJs": true,
-
-    /* Bundled projects */
-    "lib": ["ESNext", "dom", "dom.iterable", "ES2024.Array"],
-    "module": "preserve",
-    "noEmit": true,
-    "jsx": "react-jsx",
     "incremental": true,
+    "target": "ESNext",
+
+    "jsx": "react-jsx",
+    /* Bundled projects */
+    "lib": ["esnext", "dom", "dom.iterable"],
+    "moduleDetection": "force",
 
     /* Path Aliases */
     "baseUrl": ".",
+    "module": "preserve",
     "paths": {
       "@/*": ["app/*"],
       "content-collections": ["./.content-collections/generated"]
-    }
+    },
+    "resolveJsonModule": true,
+    "allowJs": true,
+
+    "checkJs": true,
+    /* Strictness */
+    "strict": true,
+    "noImplicitOverride": true,
+    "noUncheckedIndexedAccess": true,
+    "noEmit": true,
+    /* Base Options: */
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "skipLibCheck": true
   },
-  "include": [".eslintrc.cjs", "**/*.ts", "**/*.tsx", "**/*.cjs", "**/*.js"],
+  "include": [
+    ".eslintrc.cjs",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.cjs",
+    "**/*.js",
+    "eslint.config.mjs"
+  ],
 
   "exclude": ["node_modules"]
 }

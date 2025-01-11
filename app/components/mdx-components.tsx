@@ -1,9 +1,9 @@
-import * as React from "react";
 import { useMDXComponent } from "@content-collections/mdx/react";
+import * as React from "react";
 
-import { cn } from "@/lib/utils";
 import { Callout } from "@/components/mdx-callout";
 import { MdxCard } from "@/components/mdx-card";
+import { cn } from "@/lib/utils";
 
 const components = {
   h1: ({ className, ...props }: React.HTMLAttributes<HTMLHeadingElement>) => (
@@ -98,7 +98,6 @@ const components = {
     alt,
     ...props
   }: React.ImgHTMLAttributes<HTMLImageElement>) => (
-    // eslint-disable-next-line @next/next/no-img-element
     <img className={cn("rounded-md border", className)} alt={alt} {...props} />
   ),
   hr: ({ ...props }) => <hr className="my-4 md:my-8" {...props} />,

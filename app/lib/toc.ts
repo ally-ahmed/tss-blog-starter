@@ -10,7 +10,9 @@ const textTypes = ["text", "emphasis", "strong", "inlineCode"];
 function flattenNode(node) {
   const p = [];
   visit(node, (node) => {
-    if (!textTypes.includes(node.type)) return;
+    if (!textTypes.includes(node.type)) {
+      return;
+    }
     p.push(node.value);
   });
   return p.join(``);
@@ -47,10 +49,11 @@ function getItems(node, current): Items {
   }
 
   if (node.type === "list") {
-    current.items = node.children.map((i) => getItems(i, {}));
+    current.items = node.children.map(i => getItems(i, {}));
 
     return current;
-  } else if (node.type === "listItem") {
+  }
+  else if (node.type === "listItem") {
     const heading = getItems(node.children[0], {});
 
     if (node.children.length > 1) {
@@ -63,10 +66,12 @@ function getItems(node, current): Items {
   return {};
 }
 
-const getToc = () => (node, file) => {
-  const table = toc(node);
-  file.data = getItems(table.map, {});
-};
+function getToc() {
+  return (node, file) => {
+    const table = toc(node);
+    file.data = getItems(table.map, {});
+  };
+}
 
 export type TableOfContents = Items;
 

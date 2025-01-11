@@ -1,4 +1,6 @@
-import { type Config } from "tailwindcss";
+import type { Config } from "tailwindcss";
+
+import animatePlugin from "tailwindcss-animate";
 import { fontFamily } from "tailwindcss/defaultTheme";
 
 /** @type {import('tailwindcss').Config} */
@@ -53,5 +55,5 @@ export default {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [animatePlugin],
 } satisfies Config;

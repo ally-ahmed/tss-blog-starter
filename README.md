@@ -60,7 +60,7 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 
 ## Roadmap
 
-- [ ] ES Lint & Prettier
+- [ ] Flashing on dark mode
 - [ ] Finish up `On this page` component
 - [ ] Dynamic OG image generation
 - [ ] Font optimisation - font change causing cumulative layout shift (CLS)
@@ -71,3 +71,4 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 - [UI inspired by Vercel portfolio blog starter](https://vercel.com/templates/next.js/portfolio-starter-kit)
 - [Orc Dev screen size component](https://www.orcdev.com/components/screen-size)
 - [shadcn-ui/taxonomy](https://github.com/shadcn-ui/taxonomy/tree/651f984e52edd65d40ccd55e299c1baeea3ff017)
+- [antfu/eslint-config](https://github.com/antfu/eslint-config)

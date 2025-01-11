@@ -1,13 +1,13 @@
-import { createFileRoute, redirect, Link } from "@tanstack/react-router";
-import { allPosts } from "content-collections";
 import mdxCss from "@/styles/mdx.css?url";
+import { createFileRoute, Link, redirect } from "@tanstack/react-router";
+import { ChevronLeft } from "lucide-react";
+
 import { Mdx } from "@/components/mdx-components";
 import { buttonVariants } from "@/components/ui/button";
-import { cn, formatDate } from "@/lib/utils";
-import { ChevronLeft } from "lucide-react";
-import { getTableOfContents } from "@/lib/toc";
-import { TableOfContents } from "@/components/toc";
 import { seo } from "@/lib/seo";
+import { getTableOfContents } from "@/lib/toc";
+import { cn, formatDate } from "@/lib/utils";
+import { allPosts } from "content-collections";
 
 export const Route = createFileRoute("/blog/$slug")({
   beforeLoad: () => ({
@@ -45,7 +45,7 @@ export const Route = createFileRoute("/blog/$slug")({
 });
 
 function RouteComponent() {
-  const { post, toc } = Route.useLoaderData();
+  const { post } = Route.useLoaderData();
   return (
     <section className="">
       <article className="container relative max-w-3xl">
@@ -71,7 +71,8 @@ function RouteComponent() {
               dateTime={post.publishedAt}
               className="block text-sm text-muted-foreground"
             >
-              Published on {formatDate(post.publishedAt)}
+              Published on
+              {formatDate(post.publishedAt)}
             </time>
           )}
           <h1 className="my-4 inline-block font-heading text-4xl leading-tight lg:text-5xl">

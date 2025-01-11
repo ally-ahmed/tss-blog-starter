@@ -1,11 +1,13 @@
-import { formatDate } from "@/lib/utils";
-import type { Posts } from "@/lib/utils";
 import { Link } from "@tanstack/react-router";
+
+import type { Posts } from "@/lib/utils";
+
+import { formatDate } from "@/lib/utils";
 
 export function BlogList({ posts }: { posts: Posts }) {
   return (
     <ul className="gap-4 my-8">
-      {posts.map((post) => (
+      {posts.map(post => (
         <Link
           to="/blog/$slug"
           params={{ slug: post._meta.path }}

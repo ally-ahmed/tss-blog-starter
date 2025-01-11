@@ -1,4 +1,5 @@
 import { Link } from "@tanstack/react-router";
+
 import { cn } from "@/lib/utils";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -28,7 +29,7 @@ export function MdxCard({
         </div>
       </div>
       {href && (
-        <Link href={disabled ? "#" : href} className="absolute inset-0">
+        <Link to={disabled ? "#" : href} className="absolute inset-0">
           <span className="sr-only">View</span>
         </Link>
       )}

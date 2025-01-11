@@ -10,6 +10,7 @@ export function NotFound({ children }: { children?: any }) {
         <button
           onClick={() => window.history.back()}
           className="bg-emerald-500 text-white px-2 py-1 rounded uppercase font-black text-sm"
+          type="button"
         >
           Go back
         </button>

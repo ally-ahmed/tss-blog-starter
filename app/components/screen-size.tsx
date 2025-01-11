@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 
-export const ScreenSize = () => {
-  if (import.meta.env.PROD) return null;
+export function ScreenSize() {
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
@@ -36,4 +35,4 @@ export const ScreenSize = () => {
       <span className="hidden 2xl:inline">2XL</span>
     </div>
   );
-};
+}

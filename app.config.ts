@@ -1,7 +1,7 @@
+import contentCollections from "@content-collections/vite";
 import { defineConfig } from "@tanstack/start/config";
 import { cloudflare } from "unenv";
 import viteTsConfigPaths from "vite-tsconfig-paths";
-import contentCollections from "@content-collections/vite";
 
 export default defineConfig({
   server: {

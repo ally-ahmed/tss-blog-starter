@@ -1,7 +1,8 @@
+import { createFileRoute } from "@tanstack/react-router";
+
 import { BlogList } from "@/components/blog-list";
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { sortedPosts } from "@/lib/utils";
 import { seo } from "@/lib/seo";
+import { sortedPosts } from "@/lib/utils";
 
 export const Route = createFileRoute("/blog/")({
   head: () => ({

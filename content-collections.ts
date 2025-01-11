@@ -14,7 +14,7 @@ const posts = defineCollection({
   name: "posts",
   directory: "content",
   include: "**/*.mdx",
-  schema: (z) => ({
+  schema: z => ({
     title: z.string(),
     description: z.string(),
     publishedAt: z.string().date(),

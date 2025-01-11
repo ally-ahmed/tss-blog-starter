@@ -1,18 +1,18 @@
 // https://ui.shadcn.com/docs/dark-mode/vite
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useEffect, useMemo, useState } from "react";
 
 type Theme = "dark" | "light" | "system";
 
-type ThemeProviderProps = {
+interface ThemeProviderProps {
   children: React.ReactNode;
   defaultTheme?: Theme;
   storageKey?: string;
-};
+}
 
-type ThemeProviderState = {
+interface ThemeProviderState {
   theme: Theme;
   setTheme: (theme: Theme) => void;
-};
+}
 
 const initialState: ThemeProviderState = {
   theme: "system",
@@ -28,7 +28,9 @@ export function ThemeProvider({
   ...props
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(() => {
-    if (typeof localStorage === "undefined") return "system";
+    if (typeof localStorage === "undefined") {
+      return "system";
+    }
     return (localStorage?.getItem(storageKey) as Theme) || defaultTheme;
   });
 
@@ -50,14 +52,16 @@ export function ThemeProvider({
     root.classList.add(theme);
   }, [theme]);
 
-  const value = {
-    theme,
-    setTheme: (theme: Theme) => {
-      localStorage.setItem(storageKey, theme);
-      setTheme(theme);
-    },
-  };
-
+  const value = useMemo(
+    () => ({
+      theme,
+      setTheme: (newTheme: Theme) => {
+        localStorage.setItem(storageKey, newTheme);
+        setTheme(newTheme);
+      },
+    }),
+    [theme, storageKey],
+  );
   return (
     <ThemeProviderContext.Provider {...props} value={value}>
       {children}
@@ -65,11 +69,11 @@ export function ThemeProvider({
   );
 }
 
-export const useTheme = () => {
+export function useTheme() {
   const context = useContext(ThemeProviderContext);
 
   if (context === undefined)
     throw new Error("useTheme must be used within a ThemeProvider");
 
   return context;
-};
+}
