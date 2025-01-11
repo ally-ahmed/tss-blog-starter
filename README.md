@@ -60,7 +60,6 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 
 ## Roadmap
 
-- [ ] Flashing on dark mode
 - [ ] Finish up `On this page` component
 - [ ] Dynamic OG image generation
 - [ ] Font optimisation - font change causing cumulative layout shift (CLS)
