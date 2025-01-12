@@ -24,7 +24,7 @@ export default defineConfig({
       contentCollections(),
     ],
     build: {
-      minify: true,
+      minify: false,
     },
   },
   // react: {
