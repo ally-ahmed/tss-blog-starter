@@ -23,6 +23,9 @@ export default defineConfig({
       }),
       contentCollections(),
     ],
+    build: {
+      minify: true,
+    },
   },
   // react: {
   //   babel: {
