@@ -7,11 +7,13 @@ import fontsourceInter from "@fontsource-variable/inter?url";
 import {
   createRootRoute,
   Outlet,
+  ScriptOnce,
   ScrollRestoration,
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import calSans from "cal-sans?url";
 import { ThemeProvider } from "next-themes";
+import { outdent } from "outdent";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { Footer } from "@/components/footer";
@@ -106,6 +108,26 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <Meta />
+        <ScriptOnce>
+          {outdent`
+          function initTheme() {
+            if (typeof localStorage === 'undefined') return
+
+            const localTheme = localStorage.getItem('theme')
+            const preferTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+            const resolvedTheme = localTheme === null || localTheme === 'system' ? preferTheme : localTheme
+
+            if (localTheme === null) {
+              localStorage.setItem('theme', 'system')
+            }
+
+            document.documentElement.dataset.theme = resolvedTheme
+            document.documentElement.style.colorScheme = resolvedTheme
+          }
+
+          initTheme()
+        `}
+        </ScriptOnce>
       </head>
       <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
         <ThemeProvider attribute="class">

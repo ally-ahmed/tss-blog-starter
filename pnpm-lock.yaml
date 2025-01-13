@@ -32,6 +32,9 @@ dependencies:
   next-themes:
     specifier: ^0.4.4
     version: 0.4.4(react-dom@18.3.1)(react@18.3.1)
+  outdent:
+    specifier: ^0.8.0
+    version: 0.8.0
   react:
     specifier: ^18.3.1
     version: 18.3.1
@@ -8350,6 +8353,10 @@ packages:
       type-check: 0.4.0
       word-wrap: 1.2.5
     dev: true
+
+  /outdent@0.8.0:
+    resolution: {integrity: sha512-KiOAIsdpUTcAXuykya5fnVVT+/5uS0Q1mrkRHcF89tpieSmY33O/tmc54CqwA+bfhbtEfZUNLHaPUiB9X3jt1A==}
+    dev: false
 
   /p-limit@2.3.0:
     resolution: {integrity: sha512-//88mFWSJx8lxCzwdAABTJL2MyWB12+eIY7MDL2SqLmAkeKU9qxRvWuSyTjm3FUmpBEMuFfckAIqEaVGUDxb6w==}
