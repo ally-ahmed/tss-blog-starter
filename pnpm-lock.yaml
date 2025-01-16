@@ -58,6 +58,9 @@ devDependencies:
   '@content-collections/mdx':
     specifier: ^0.2.0
     version: 0.2.0(@content-collections/core@0.8.0)(acorn@8.14.0)(react-dom@18.3.1)(react@18.3.1)
+  '@content-collections/vinxi':
+    specifier: https://pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@458
+    version: '@pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@458(@content-collections/core@0.8.0)(vite@6.0.7)'
   '@content-collections/vite':
     specifier: ^0.2.3
     version: 0.2.3(@content-collections/core@0.8.0)(vite@6.0.7)
@@ -9405,4 +9408,17 @@ packages:
 
   /zwitch@2.0.4:
     resolution: {integrity: sha512-bXE4cR/kVZhKZX/RjPEflHaKVhUVl85noU3v6b8apfQEc1x4A+zBxjZ4lN8LqGd6WZ3dl98pY4o717VFmoPp+A==}
+    dev: true
+
+  '@pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@458(@content-collections/core@0.8.0)(vite@6.0.7)':
+    resolution: {tarball: https://pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@458}
+    id: '@pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@458'
+    name: '@content-collections/vinxi'
+    version: 0.1.0
+    peerDependencies:
+      '@content-collections/core': ^0.x
+      vite: ^5
+    dependencies:
+      '@content-collections/core': 0.8.0(typescript@5.7.3)
+      vite: 6.0.7
     dev: true
