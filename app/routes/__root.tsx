@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 import ogImage from "@/images/og.png";
 // import "@/styles/globals.css";
 import globalStyle from "@/styles/globals.css?url";
@@ -9,7 +11,6 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import calSans from "cal-sans?url";
-import { type ReactNode, Suspense } from "react";
 // import { ThemeProvider } from "next-themes";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
@@ -17,7 +18,6 @@ import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { NotFound } from "@/components/NotFound";
 import { ScreenSize } from "@/components/screen-size";
-import { useMounted } from "@/hooks/useMounted";
 import { seo } from "@/lib/seo";
 
 export const Route = createRootRoute({
