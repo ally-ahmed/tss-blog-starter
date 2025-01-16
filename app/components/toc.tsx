@@ -2,7 +2,7 @@ import * as React from "react";
 
 import type { TableOfContents } from "@/lib/toc";
 
-import { useMounted } from "@/hooks/use-mounted";
+import { useMounted } from "@/hooks/useMounted";
 import { cn } from "@/lib/utils";
 
 interface TocProps {
@@ -14,10 +14,10 @@ export function TOC({ toc }: TocProps) {
     () =>
       toc.items
         ? toc.items
-            .flatMap(item => [item.url, item?.items?.map(item => item.url)])
+            .flatMap((item) => [item.url, item?.items?.map((item) => item.url)])
             .flat()
             .filter(Boolean)
-            .map(id => id?.split("#")[1])
+            .map((id) => id?.split("#")[1])
         : [],
     [toc],
   );

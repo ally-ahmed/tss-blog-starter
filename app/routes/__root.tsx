@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 import ogImage from "@/images/og.png";
 // import "@/styles/globals.css";
 import globalStyle from "@/styles/globals.css?url";
@@ -11,13 +9,15 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import calSans from "cal-sans?url";
+import { type ReactNode, Suspense } from "react";
 // import { ThemeProvider } from "next-themes";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { NotFound } from "@/components/NotFound";
-// import { ScreenSize } from "@/components/screen-size";
+import { ScreenSize } from "@/components/screen-size";
+import { useMounted } from "@/hooks/useMounted";
 import { seo } from "@/lib/seo";
 
 export const Route = createRootRoute({
@@ -107,7 +107,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
       <head>
         <Meta />
       </head>
-      <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
+      <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
         {/* <ThemeProvider attribute="class"> */}
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
           <Header />
@@ -115,7 +115,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
           <Footer />
         </main>
         {/* </ThemeProvider> */}
-        {/* {!import.meta.env.PROD ? <ScreenSize /> : null} */}
+        <ScreenSize />
         <ScrollRestoration />
         <Scripts />
       </body>

@@ -1,4 +1,4 @@
-import contentCollections from "@content-collections/vinxi";
+import contentCollections from "@content-collections/vite";
 import { defineConfig } from "@tanstack/start/config";
 import { cloudflare } from "unenv";
 import viteTsConfigPaths from "vite-tsconfig-paths";
@@ -17,11 +17,11 @@ export default defineConfig({
   },
   vite: {
     plugins: [
+      contentCollections(),
       // this is the plugin that enables path aliases
       viteTsConfigPaths({
         projects: ["./tsconfig.json"],
       }),
-      contentCollections(),
     ],
     // build: {
     //   minify: false,

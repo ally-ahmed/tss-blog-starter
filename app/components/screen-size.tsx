@@ -1,38 +1,20 @@
 import { useEffect, useState } from "react";
 
 export function ScreenSize() {
-  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
-
-  useEffect(() => {
-    function updateDimensions() {
-      setDimensions({
-        width: window.innerWidth,
-        height: window.innerHeight,
-      });
-    }
-
-    updateDimensions();
-    window.addEventListener("resize", updateDimensions);
-
-    return () => {
-      window.removeEventListener("resize", updateDimensions);
-    };
-  }, []);
-
-  const { width, height } = dimensions;
+  if (import.meta.env.PROD) {
+    return null;
+  }
 
   return (
-    <div className="fixed bottom-5 right-5 flex items-center gap-2 rounded-full bg-black px-2.5 py-1 font-mono text-xs font-medium text-white">
-      <span>
-        {width.toLocaleString()} x {height.toLocaleString()}
-      </span>
-      <div className="h-4 w-px bg-gray-800" />
-      <span className="sm:hidden">XS</span>
-      <span className="hidden sm:inline md:hidden">SM</span>
-      <span className="hidden md:inline lg:hidden">MD</span>
-      <span className="hidden lg:inline xl:hidden">LG</span>
-      <span className="hidden xl:inline 2xl:hidden">XL</span>
-      <span className="hidden 2xl:inline">2XL</span>
+    <div className="fixed bottom-5 right-5 z-50 flex h-8 w-8 items-center justify-center rounded-full bg-gray-800 p-3 font-mono text-xs text-white">
+      <div className="block sm:hidden">xs</div>
+      <div className="hidden sm:block md:hidden lg:hidden xl:hidden 2xl:hidden">
+        sm
+      </div>
+      <div className="hidden md:block lg:hidden xl:hidden 2xl:hidden">md</div>
+      <div className="hidden lg:block xl:hidden 2xl:hidden">lg</div>
+      <div className="hidden xl:block 2xl:hidden">xl</div>
+      <div className="hidden 2xl:block">2xl</div>
     </div>
   );
 }
