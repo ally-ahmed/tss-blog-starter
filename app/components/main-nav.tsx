@@ -2,7 +2,7 @@ import { Link } from "@tanstack/react-router";
 
 import { cn } from "@/lib/utils";
 
-import { ThemeToggle } from "./theme-toggle";
+// import { ThemeToggle } from "./theme-toggle";
 
 export function MainNav({ className }: React.HTMLAttributes<HTMLElement>) {
   return (
@@ -30,7 +30,7 @@ export function MainNav({ className }: React.HTMLAttributes<HTMLElement>) {
           >
             Github
           </a>
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
         </div>
       </nav>
     </header>

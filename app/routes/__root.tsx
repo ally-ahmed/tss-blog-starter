@@ -11,13 +11,13 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import calSans from "cal-sans?url";
-import { ThemeProvider } from "next-themes";
+// import { ThemeProvider } from "next-themes";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { NotFound } from "@/components/NotFound";
-import { ScreenSize } from "@/components/screen-size";
+// import { ScreenSize } from "@/components/screen-size";
 import { seo } from "@/lib/seo";
 
 export const Route = createRootRoute({
@@ -108,14 +108,14 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
-        <ThemeProvider attribute="class">
-          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
-            <Header />
-            {children}
-            <Footer />
-          </main>
-        </ThemeProvider>
-        {!import.meta.env.PROD ? <ScreenSize /> : null}
+        {/* <ThemeProvider attribute="class"> */}
+        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
+          <Header />
+          {children}
+          <Footer />
+        </main>
+        {/* </ThemeProvider> */}
+        {/* {!import.meta.env.PROD ? <ScreenSize /> : null} */}
         <ScrollRestoration />
         <Scripts />
       </body>
