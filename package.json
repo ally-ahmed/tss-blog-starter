@@ -33,7 +33,7 @@
     "@antfu/eslint-config": "^3.14.0",
     "@content-collections/core": "^0.8.0",
     "@content-collections/mdx": "^0.2.0",
-    "@content-collections/vinxi": "https://pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@458",
+    "@content-collections/vinxi": "https://pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@b55c65d",
     "@content-collections/vite": "^0.2.3",
     "@eslint-react/eslint-plugin": "^1.23.2",
     "@shikijs/transformers": "^1.27.2",
