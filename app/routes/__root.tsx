@@ -3,15 +3,17 @@ import type { ReactNode } from "react";
 import ogImage from "@/images/og.png";
 // import "@/styles/globals.css";
 import globalStyle from "@/styles/globals.css?url";
-import fontsourceInter from "@fontsource-variable/inter?url";
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2";
+// import fontsourceInter from "@fontsource-variable/inter?url";
 import {
   createRootRoute,
   Outlet,
   ScrollRestoration,
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
-import calSans from "cal-sans?url";
 // import { ThemeProvider } from "next-themes";
+import "@fontsource-variable/inter";
+import calSans from "cal-sans?url";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { Footer } from "@/components/footer";
@@ -72,9 +74,16 @@ export const Route = createRootRoute({
       //   type: "font/ttf",
       //   crossOrigin: "anonymous",
       // },
+      // {
+      //   rel: "stylesheet",
+      //   href: fontsourceInter,
+      // },
       {
-        rel: "stylesheet",
-        href: fontsourceInter,
+        rel: "preload",
+        href: interWoff2,
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
       },
       {
         rel: "stylesheet",
