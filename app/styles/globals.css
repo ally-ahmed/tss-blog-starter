@@ -54,8 +54,8 @@
     --destructive-foreground: 210 40% 98%;
     --ring: 215 20.2% 65.1%;
     --radius: 0.5rem;
-    --font-sans: "Inter Variable", "Inter Variable fallback";
-    --font-heading: "Cal Sans", "Cal Sans fallback";
+    --font-sans: "Inter Variable", "Inter Variable override";
+    --font-heading: "Cal Sans", "Cal Sans override";
   }
 
   .dark {
