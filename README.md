@@ -12,11 +12,11 @@ https://tss-blog-starter.pages.dev/
 
 - MDX and Markdown support
 - Syntax highlighting
-- Light/dark mode toggle
 - Tailwind CSS
 - Custom fonts
-- Dynamic OG images (coming soon)
+- Light/dark mode toggle (coming soon)
 - Font optimisation (coming soon)
+- Dynamic OG images (coming soon)
 
 ## Tech
 
