@@ -14,8 +14,8 @@ https://tss-blog-starter.pages.dev/
 - Syntax highlighting
 - Tailwind CSS
 - Custom fonts
+- Font optimisation
 - Light/dark mode toggle (coming soon)
-- Font optimisation (coming soon)
 - Dynamic OG images (coming soon)
 
 ## Tech
@@ -62,7 +62,6 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 
 - [ ] Finish up `On this page` component
 - [ ] Dynamic OG image generation
-- [ ] Font optimisation - font change causing cumulative layout shift (CLS)
 - [ ] Image optimisation
 
 ## Acknowledgements
