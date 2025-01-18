@@ -1,19 +1,18 @@
 import type { ReactNode } from "react";
 
 import ogImage from "@/images/og.png";
-// import "@/styles/globals.css";
 import globalStyle from "@/styles/globals.css?url";
 import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2";
-// import fontsourceInter from "@fontsource-variable/inter?url";
 import {
   createRootRoute,
   Outlet,
   ScrollRestoration,
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
+import "cal-sans";
+import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2";
 // import { ThemeProvider } from "next-themes";
 import "@fontsource-variable/inter";
-import calSans from "cal-sans?url";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { Footer } from "@/components/footer";
@@ -67,17 +66,6 @@ export const Route = createRootRoute({
         rel: "stylesheet",
         href: globalStyle,
       },
-      // {
-      //   rel: "preload",
-      //   href: "/fonts/CalSans-SemiBold.ttf",
-      //   as: "font",
-      //   type: "font/ttf",
-      //   crossOrigin: "anonymous",
-      // },
-      // {
-      //   rel: "stylesheet",
-      //   href: fontsourceInter,
-      // },
       {
         rel: "preload",
         href: interWoff2,
@@ -86,8 +74,11 @@ export const Route = createRootRoute({
         crossOrigin: "anonymous",
       },
       {
-        rel: "stylesheet",
-        href: calSans,
+        rel: "preload",
+        href: calSansWoff2,
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
       },
     ],
   }),

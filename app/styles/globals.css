@@ -15,6 +15,16 @@
     U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* inter-latin-wght-normal */
+@font-face {
+  font-family: "Cal Sans";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 100 900;
+  src: url(cal-sans/fonts/webfonts/CalSans-SemiBold.woff2)
+    format("woff2-variations");
+}
+
 @layer base {
   * {
     @apply border-border;
