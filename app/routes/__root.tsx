@@ -11,14 +11,16 @@ import {
 import { Meta, Scripts } from "@tanstack/start";
 import "cal-sans";
 import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2";
-import { ThemeProvider } from "next-themes";
-import "@fontsource-variable/inter";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
+
+import "@fontsource-variable/inter";
+
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { NotFound } from "@/components/NotFound";
 import { ScreenSize } from "@/components/screen-size";
+import { ThemeProvider } from "@/components/theme-provider";
 import { seo } from "@/lib/seo";
 
 export const Route = createRootRoute({
