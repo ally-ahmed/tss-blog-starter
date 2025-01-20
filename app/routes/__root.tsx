@@ -1,5 +1,3 @@
-import type { ReactNode } from "react";
-
 import ogImage from "@/images/og.png";
 import globalStyle from "@/styles/globals.css?url";
 import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2";
@@ -9,9 +7,10 @@ import {
   ScrollRestoration,
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
-import "cal-sans";
 import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2";
+import "cal-sans";
 import { ThemeProvider } from "next-themes";
+import { type ReactNode, Suspense } from "react";
 import "@fontsource-variable/inter";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
@@ -103,22 +102,24 @@ function RootComponent() {
 
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <Meta />
-      </head>
-      <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
-        <ThemeProvider attribute="class">
-          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
-            <Header />
-            {children}
-            <Footer />
-          </main>
-        </ThemeProvider>
-        <ScreenSize />
-        <ScrollRestoration />
-        <Scripts />
-      </body>
-    </html>
+    <Suspense>
+      <html lang="en" suppressHydrationWarning>
+        <head>
+          <Meta />
+        </head>
+        <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
+          <ThemeProvider attribute="class">
+            <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
+              <Header />
+              {children}
+              <Footer />
+            </main>
+          </ThemeProvider>
+          <ScreenSize />
+          <ScrollRestoration />
+          <Scripts />
+        </body>
+      </html>
+    </Suspense>
   );
 }
