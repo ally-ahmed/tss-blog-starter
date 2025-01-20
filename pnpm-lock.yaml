@@ -59,11 +59,8 @@ devDependencies:
     specifier: ^0.2.0
     version: 0.2.0(@content-collections/core@0.8.0)(acorn@8.14.0)(react-dom@18.3.1)(react@18.3.1)
   '@content-collections/vinxi':
-    specifier: https://pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@b55c65d
+    specifier: ^0.1.0
     version: '@pkg.pr.new/sdorra/content-collections/@content-collections/vinxi@b55c65d(@content-collections/core@0.8.0)(vite@6.0.7)'
-  '@content-collections/vite':
-    specifier: ^0.2.3
-    version: 0.2.3(@content-collections/core@0.8.0)(vite@6.0.7)
   '@eslint-react/eslint-plugin':
     specifier: ^1.23.2
     version: 1.23.2(eslint@9.18.0)(typescript@5.7.3)
@@ -558,14 +555,6 @@ packages:
       zod: 3.24.1
     dev: true
 
-  /@content-collections/integrations@0.2.1(@content-collections/core@0.8.0):
-    resolution: {integrity: sha512-AyEcS2MmcOXSYt6vNmJsAiu6EBYjtNiwYGUVUmpG3llm8Gt8uiNrhIhlHyv3cuk+N8KJ2PWemLcMqtQJ+sW3bA==}
-    peerDependencies:
-      '@content-collections/core': 0.x
-    dependencies:
-      '@content-collections/core': 0.8.0(typescript@5.7.3)
-    dev: true
-
   /@content-collections/mdx@0.2.0(@content-collections/core@0.8.0)(acorn@8.14.0)(react-dom@18.3.1)(react@18.3.1):
     resolution: {integrity: sha512-Up42WaoZN+iYLO7rI59hy4ivw+Q7xXoezmoyjFFQjE0P9Mi3p5jGDdpsuXYmUiQOMZubPLClZHAbntk/27PxSQ==}
     peerDependencies:
@@ -582,17 +571,6 @@ packages:
     transitivePeerDependencies:
       - acorn
       - supports-color
-    dev: true
-
-  /@content-collections/vite@0.2.3(@content-collections/core@0.8.0)(vite@6.0.7):
-    resolution: {integrity: sha512-W4yAXVpKm+h2YH4LvXMHqi++y1YzUcKVtMnM8rZL44mPWeSJnMPcPVeECCahsLDyuyVeCKsL/5JrH7EPTdX7Aw==}
-    peerDependencies:
-      '@content-collections/core': ^0.x
-      vite: ^5
-    dependencies:
-      '@content-collections/core': 0.8.0(typescript@5.7.3)
-      '@content-collections/integrations': 0.2.1(@content-collections/core@0.8.0)
-      vite: 6.0.7
     dev: true
 
   /@cspotcode/source-map-support@0.8.1:
