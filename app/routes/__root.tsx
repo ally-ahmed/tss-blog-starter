@@ -103,12 +103,15 @@ function RootComponent() {
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <Suspense>
-      <html lang="en" suppressHydrationWarning style={{ colorScheme: "dark" }}>
+      <html lang="en" suppressHydrationWarning>
         <head>
           <Meta />
         </head>
         <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
-          <ThemeProvider attribute="class">
+          <ThemeProvider
+            attribute="class"
+            scriptProps={{ "data-cfasync": "false" }}
+          >
             <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
               <Header />
               {children}
