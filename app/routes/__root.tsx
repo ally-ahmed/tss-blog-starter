@@ -103,7 +103,7 @@ function RootComponent() {
 function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <Suspense>
-      <html lang="en" suppressHydrationWarning>
+      <html lang="en" suppressHydrationWarning style={{ colorScheme: "dark" }}>
         <head>
           <Meta />
         </head>
