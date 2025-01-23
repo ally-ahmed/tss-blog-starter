@@ -14,7 +14,7 @@ const posts = defineCollection({
   name: "posts",
   directory: "content",
   include: "**/*.mdx",
-  schema: z => ({
+  schema: (z) => ({
     title: z.string(),
     description: z.string(),
     publishedAt: z.string().date(),
@@ -31,7 +31,9 @@ const posts = defineCollection({
             transformers: [
               transformerMetaHighlight(),
               transformerMetaWordHighlight(),
-              transformerNotationDiff(),
+              transformerNotationDiff({
+                matchAlgorithm: "v3",
+              }),
             ],
             onVisitLine(node: any) {
               // Prevent lines from collapsing in `display: grid` mode, and allow empty

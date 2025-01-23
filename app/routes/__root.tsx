@@ -2,7 +2,7 @@ import type { ReactNode } from "react";
 
 import ogImage from "@/images/og.png";
 import globalStyle from "@/styles/globals.css?url";
-import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2";
+// import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2";
 import {
   createRootRoute,
   Outlet,
@@ -10,7 +10,7 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import "cal-sans";
-import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2";
+// import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2";
 // import { ThemeProvider } from "next-themes";
 import "@fontsource-variable/inter";
 
@@ -65,20 +65,6 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: globalStyle,
-      },
-      {
-        rel: "preload",
-        href: interWoff2,
-        as: "font",
-        type: "font/woff2",
-        crossOrigin: "anonymous",
-      },
-      {
-        rel: "preload",
-        href: calSansWoff2,
-        as: "font",
-        type: "font/woff2",
-        crossOrigin: "anonymous",
       },
     ],
   }),
