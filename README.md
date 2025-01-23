@@ -10,11 +10,12 @@ https://tss-blog-starter.pages.dev/
 
 ## Features
 
+- React-19
 - MDX and Markdown support
 - Syntax highlighting
 - Tailwind CSS
 - Custom fonts
-- Font optimisation
+- Font optimisation (coming soon)
 - Light/dark mode toggle (coming soon)
 - Dynamic OG images (coming soon)
 
