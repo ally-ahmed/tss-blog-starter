@@ -10,15 +10,17 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import "cal-sans";
-// import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2";
-// import { ThemeProvider } from "next-themes";
-import "@fontsource-variable/inter";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
+
+import "@fontsource-variable/inter";
+
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { NotFound } from "@/components/NotFound";
 import { ScreenSize } from "@/components/screen-size";
+// import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2";
+import { ThemeProvider } from "@/components/theme-provider";
 import { seo } from "@/lib/seo";
 
 export const Route = createRootRoute({
@@ -94,13 +96,13 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
-        {/* <ThemeProvider attribute="class"> */}
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
-          <Header />
-          {children}
-          <Footer />
-        </main>
-        {/* </ThemeProvider> */}
+        <ThemeProvider>
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
+            <Header />
+            {children}
+            <Footer />
+          </main>
+        </ThemeProvider>
         <ScreenSize />
         <ScrollRestoration />
         <Scripts />
