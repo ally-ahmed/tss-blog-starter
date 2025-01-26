@@ -1,4 +1,6 @@
-import { type ClassValue, clsx } from "clsx";
+import type { ClassValue } from "clsx";
+
+import { clsx } from "clsx";
 import { createContext, useContext } from "react";
 import { twMerge } from "tailwind-merge";
 

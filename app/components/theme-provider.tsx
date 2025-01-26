@@ -25,7 +25,7 @@ const [ThemeContextProvider, useTheme] = createContextFactory<ThemeContext>({
 });
 
 function ThemeProvider({ children }: PropsWithChildren) {
-  const [theme, _setTheme] = useState<Theme>("system");
+  const [theme, _setTheme] = useState<Theme>(getLocalTheme());
   const [resolvedTheme, _setResolvedTheme] = useState<ResolvedTheme>(
     getResolvedTheme(theme),
   );
@@ -87,7 +87,7 @@ function ThemeProvider({ children }: PropsWithChildren) {
   return (
     <ThemeContextProvider value={context}>
       <ScriptOnce>
-        {outdent/* js */ `
+        {outdent`
           function initTheme() {
             if (typeof localStorage === 'undefined') return
 

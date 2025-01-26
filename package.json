@@ -17,12 +17,12 @@
     "@fontsource-variable/inter": "^5.1.1",
     "@mantine/hooks": "^7.16.1",
     "@radix-ui/react-slot": "^1.1.1",
-    "@tanstack/react-router": "^1.97.14",
-    "@tanstack/start": "^1.97.15",
+    "@tanstack/react-router": "^1.97.21",
+    "@tanstack/start": "^1.97.22",
     "cal-sans": "^1.0.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
-    "lucide-react": "^0.473.0",
+    "lucide-react": "^0.474.0",
     "next-themes": "^0.4.4",
     "outdent": "^0.8.0",
     "react": "19.0.0",
@@ -33,20 +33,20 @@
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@antfu/eslint-config": "^3.16.0",
+    "@antfu/eslint-config": "^4.1.0",
     "@content-collections/core": "^0.8.0",
     "@content-collections/mdx": "^0.2.0",
     "@content-collections/vinxi": "^0.1.0",
     "@eslint-react/eslint-plugin": "^1.24.1",
     "@shikijs/transformers": "^2.1.0",
-    "@tanstack/eslint-plugin-router": "^1.97.8",
-    "@types/react": "^19.0.7",
+    "@tanstack/eslint-plugin-router": "^1.97.19",
+    "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
     "@types/unist": "^3.0.3",
     "@vitejs/plugin-react": "^4.3.4",
     "autoprefixer": "^10.4.20",
     "babel-plugin-react-compiler": "19.0.0-beta-e552027-20250112",
-    "eslint": "^9.18.0",
+    "eslint": "^9.19.0",
     "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.18",
@@ -66,6 +66,6 @@
     "unist-util-visit": "^5.0.0",
     "vite": "^6.0.11",
     "vite-tsconfig-paths": "^5.1.4",
-    "wrangler": "^3.105.0"
+    "wrangler": "^3.105.1"
   }
 }
