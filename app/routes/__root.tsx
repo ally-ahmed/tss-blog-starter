@@ -3,12 +3,14 @@ import type { ReactNode } from "react";
 import ogImage from "@/images/og.png";
 import globalStyle from "@/styles/globals.css?url";
 import mdxCss from "@/styles/mdx.css?url";
+import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2";
 import {
   createRootRoute,
   Outlet,
   ScrollRestoration,
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
+import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { Footer } from "@/components/footer";
@@ -67,6 +69,20 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: mdxCss,
+      },
+      {
+        rel: "preload",
+        href: interWoff2,
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
+      },
+      {
+        rel: "preload",
+        href: calSansWoff2,
+        as: "font",
+        type: "font/woff2",
+        crossOrigin: "anonymous",
       },
     ],
   }),
