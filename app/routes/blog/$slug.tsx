@@ -1,4 +1,3 @@
-import mdxCss from "@/styles/mdx.css?url";
 import { createFileRoute, Link, redirect } from "@tanstack/react-router";
 import { ChevronLeft } from "lucide-react";
 
@@ -34,12 +33,6 @@ export const Route = createFileRoute("/blog/$slug")({
           }),
         ]
       : [],
-    links: [
-      {
-        rel: "stylesheet",
-        href: mdxCss,
-      },
-    ],
   }),
   component: RouteComponent,
 });

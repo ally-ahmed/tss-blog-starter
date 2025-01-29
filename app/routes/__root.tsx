@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import ogImage from "@/images/og.png";
 import globalStyle from "@/styles/globals.css?url";
+import mdxCss from "@/styles/mdx.css?url";
 import {
   createRootRoute,
   Outlet,
@@ -62,6 +63,10 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: globalStyle,
+      },
+      {
+        rel: "stylesheet",
+        href: mdxCss,
       },
     ],
   }),

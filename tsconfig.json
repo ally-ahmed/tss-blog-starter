@@ -28,7 +28,8 @@
     "esModuleInterop": true,
     "isolatedModules": true,
     "verbatimModuleSyntax": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": ["vite/client"]
   },
   "include": [
     ".eslintrc.cjs",
