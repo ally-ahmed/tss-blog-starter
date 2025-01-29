@@ -65,6 +65,7 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 - [ ] Dynamic OG image generation
 - [ ] Image optimisation
 - [ ] Font optimisation
+- [ ] Sitemap and robots
 
 ## Acknowledgements
 
