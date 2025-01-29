@@ -18,6 +18,9 @@ export type HandlerCallback<TRouter extends AnyRouter> = (ctx: {
 
 const streamHandler: HandlerCallback<AnyRouter> = (ctx) => {
   ctx.router.serverSsr!.injectScript(
+    // HACK: Script was being executed to late so needed to move here
+    // https://discord.com/channels/719702312431386674/1333850567533133824/1333874445563072552
+    // https://discord.com/channels/719702312431386674/1313219828315721799
     () => outdent`
       function initTheme() {
         if (typeof localStorage === 'undefined') return
@@ -29,12 +32,12 @@ const streamHandler: HandlerCallback<AnyRouter> = (ctx) => {
         if (localTheme === null) {
           localStorage.setItem('theme', 'system')
         }
-          console.log('initTheme', resolvedTheme)
+          // console.log('initTheme', resolvedTheme)
 
         document.documentElement.dataset.theme = resolvedTheme
         document.documentElement.style.colorScheme = resolvedTheme
       }
-        console.log('initTheme')
+        // console.log('initTheme')
 
       initTheme()`,
   );
