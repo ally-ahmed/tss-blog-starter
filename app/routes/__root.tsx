@@ -12,7 +12,7 @@ import {
 } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2?url";
-import "cal-sans?url";
+import "cal-sans";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { Footer } from "@/components/footer";
