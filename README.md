@@ -14,9 +14,9 @@ https://tss-blog-starter.pages.dev/
 - MDX and Markdown support
 - Syntax highlighting
 - Tailwind CSS
+- Light/dark mode toggle
 - Custom fonts
 - Font optimisation (coming soon)
-- Light/dark mode toggle (coming soon)
 - Dynamic OG images (coming soon)
 
 ## Tech
@@ -64,6 +64,7 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 - [ ] Finish up `On this page` component
 - [ ] Dynamic OG image generation
 - [ ] Image optimisation
+- [ ] Font optimisation
 
 ## Acknowledgements
 

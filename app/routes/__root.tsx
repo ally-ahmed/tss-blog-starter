@@ -79,11 +79,7 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <RootDocument>
-      <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
-        <Header />
-        <Outlet />
-        <Footer />
-      </main>
+      <Outlet />
     </RootDocument>
   );
 }
@@ -95,7 +91,13 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <Meta />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
-        <ThemeProvider>{children}</ThemeProvider>
+        <ThemeProvider>
+          <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0 min-h-screen">
+            <Header />
+            {children}
+            <Footer />
+          </main>
+        </ThemeProvider>
         <ScreenSize />
         <ScrollRestoration />
         <Scripts />
