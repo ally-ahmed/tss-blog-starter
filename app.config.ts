@@ -3,6 +3,8 @@ import { defineConfig } from "@tanstack/start/config";
 import { FontaineTransform } from "fontaine";
 import path from "node:path";
 import { cloudflare } from "unenv";
+import wasm from "vite-plugin-wasm";
+import wasmModuleWorkers from "vite-plugin-wasm-module-workers";
 import viteTsConfigPaths from "vite-tsconfig-paths";
 
 export default defineConfig({
@@ -16,6 +18,9 @@ export default defineConfig({
       routes: ["/"],
       crawlLinks: true,
     },
+    experimental: {
+      wasm: true,
+    },
   },
   vite: {
     plugins: [
@@ -23,6 +28,8 @@ export default defineConfig({
       viteTsConfigPaths({
         projects: ["./tsconfig.json"],
       }),
+      wasm(),
+      wasmModuleWorkers(),
       contentCollections(),
       FontaineTransform.vite({
         fallbacks: ["Arial", "Helvetica Neue"],
