@@ -64,8 +64,7 @@ function RouteComponent() {
               dateTime={post.publishedAt}
               className="block text-sm text-muted-foreground"
             >
-              Published on
-              {formatDate(post.publishedAt)}
+              Published on {formatDate(post.publishedAt)}
             </time>
           )}
           <h1 className="my-4 inline-block font-heading text-4xl leading-tight lg:text-5xl">
