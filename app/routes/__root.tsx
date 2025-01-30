@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 
 import ogImage from "@/images/og.png";
 import globalStyle from "@/styles/globals.css?url";
+import mdxCss from "@/styles/mdx.css?url";
 import "@fontsource-variable/inter";
 import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
 import {
@@ -65,6 +66,10 @@ export const Route = createRootRoute({
       {
         rel: "stylesheet",
         href: globalStyle,
+      },
+      {
+        rel: "stylesheet",
+        href: mdxCss,
       },
       {
         rel: "preload",
