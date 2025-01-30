@@ -8,7 +8,7 @@
   "keywords": [],
   "scripts": {
     "dev": "vinxi dev",
-    "build": "vinxi build",
+    "build": "content-collections build && vinxi build",
     "start": "vinxi start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^4.1.0",
+    "@content-collections/cli": "^0.1.6",
     "@content-collections/core": "^0.8.0",
     "@content-collections/mdx": "^0.2.0",
     "@content-collections/vinxi": "^0.1.0",
