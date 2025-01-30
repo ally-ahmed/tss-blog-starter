@@ -16,6 +16,8 @@ https://tss-blog-starter.pages.dev/
 - Tailwind CSS
 - Light/dark mode toggle
 - Custom fonts
+- Sitemap and Robots.txt
+- Static prerendering for static and dyanmic pages
 - Font optimisation (coming soon)
 - Dynamic OG images (coming soon)
 
@@ -61,12 +63,10 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 
 ## Roadmap
 
-- [ ] Static prerendering for dynamic pages
-- [ ] Sitemap and robots
+- [ ] Dynamic OG image generation
 - [ ] Scroll restoration
 - [ ] Tailwind CSS V4
 - [ ] Finish up `On this page` component
-- [ ] Dynamic OG image generation
 - [ ] Image optimisation
 - [ ] Font optimisation
 
