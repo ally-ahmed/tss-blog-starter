@@ -1,0 +1,4 @@
+User-agent: *
+Host: https://tss-blog-starter.pages.dev/
+Sitemap: https://tss-blog-starter.pages.dev/sitemap.xml
+

@@ -1,10 +1,12 @@
 import contentCollections from "@content-collections/vinxi";
 import { defineConfig } from "@tanstack/start/config";
 import { FontaineTransform } from "fontaine";
-import fs from "node:fs/promises";
 import path from "node:path";
+import { generateSitemap } from "tanstack-router-sitemap";
 import { cloudflare } from "unenv";
 import viteTsConfigPaths from "vite-tsconfig-paths";
+
+import { sitemap } from "./sitemap";
 
 export default defineConfig({
   server: {
@@ -42,6 +44,7 @@ export default defineConfig({
           );
         },
       }),
+      generateSitemap(sitemap),
     ],
     // build: {
     //   minify: false,
