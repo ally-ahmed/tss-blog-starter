@@ -61,11 +61,14 @@ Currently using cloudflare as the deployment target in `tss-blog-starter`. To de
 
 ## Roadmap
 
+- [ ] Static prerendering for dynamic pages
+- [ ] Sitemap and robots
+- [ ] Scroll restoration
+- [ ] Tailwind CSS V4
 - [ ] Finish up `On this page` component
 - [ ] Dynamic OG image generation
 - [ ] Image optimisation
 - [ ] Font optimisation
-- [ ] Sitemap and robots
 
 ## Acknowledgements
 

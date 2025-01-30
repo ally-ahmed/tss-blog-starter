@@ -1,6 +1,7 @@
 import contentCollections from "@content-collections/vinxi";
 import { defineConfig } from "@tanstack/start/config";
 import { FontaineTransform } from "fontaine";
+import fs from "node:fs/promises";
 import path from "node:path";
 import { cloudflare } from "unenv";
 import viteTsConfigPaths from "vite-tsconfig-paths";
@@ -15,6 +16,15 @@ export default defineConfig({
     prerender: {
       routes: ["/"],
       crawlLinks: true,
+    },
+    hooks: {
+      "prerender:routes": async (routes) => {
+        // add each post path to the routes set
+        const { allPosts } = await import("./.content-collections/generated");
+        allPosts.forEach((post) => {
+          routes.add(`/blog/${post._meta.path}`);
+        });
+      },
     },
   },
   vite: {
