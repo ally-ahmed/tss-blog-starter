@@ -3,16 +3,12 @@ import type { ReactNode } from "react";
 import ogImage from "@/images/og.png";
 import globalStyle from "@/styles/globals.css?url";
 import mdxCss from "@/styles/mdx.css?url";
-import "@fontsource-variable/inter";
+// import "@fontsource-variable/inter";
 // import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
-import {
-  createRootRoute,
-  Outlet,
-  ScrollRestoration,
-} from "@tanstack/react-router";
+import { createRootRoute, Outlet } from "@tanstack/react-router";
 import { Meta, Scripts } from "@tanstack/start";
 // import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2?url";
-import "cal-sans";
+// import "cal-sans";
 
 import { DefaultCatchBoundary } from "@/components/DefaultCatchBoundary";
 import { Footer } from "@/components/footer";
@@ -121,7 +117,6 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
           </main>
         </ThemeProvider>
         <ScreenSize />
-        <ScrollRestoration />
         <Scripts />
       </body>
     </html>
