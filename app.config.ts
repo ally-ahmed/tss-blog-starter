@@ -37,7 +37,7 @@ export default defineConfig({
       }),
       contentCollections(),
       FontaineTransform.vite({
-        fallbacks: ["Arial", "Helvetica Neue"],
+        fallbacks: ["Arial"],
         resolvePath: (id) => {
           return new URL(
             path.join(path.dirname(import.meta.url), "node_modules", id),
