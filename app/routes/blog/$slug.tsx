@@ -4,7 +4,6 @@ import { ChevronLeft } from "lucide-react";
 import { Mdx } from "@/components/mdx-components";
 import { buttonVariants } from "@/components/ui/button";
 import { seo } from "@/lib/seo";
-import { getTableOfContents } from "@/lib/toc";
 import { cn, formatDate } from "@/lib/utils";
 import { allPosts } from "content-collections";
 
@@ -21,8 +20,7 @@ export const Route = createFileRoute("/blog/$slug")({
       });
     }
 
-    const toc = await getTableOfContents(post.content);
-    return { post, toc };
+    return { post };
   },
   head: ({ loaderData }) => ({
     meta: loaderData
