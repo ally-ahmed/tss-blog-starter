@@ -5,8 +5,7 @@ import globalStyle from "@/styles/globals.css?url";
 import mdxCss from "@/styles/mdx.css?url";
 // import "@fontsource-variable/inter";
 // import interWoff2 from "@fontsource-variable/inter/files/inter-latin-wght-normal.woff2?url";
-import { createRootRoute, Outlet } from "@tanstack/react-router";
-import { Meta, Scripts } from "@tanstack/start";
+import { createRootRoute, HeadContent, Outlet, Scripts } from "@tanstack/react-router";
 // import calSansWoff2 from "cal-sans/fonts/webfonts/CalSans-SemiBold.woff2?url";
 // import "cal-sans";
 
@@ -106,7 +105,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <Meta />
+        <HeadContent />
       </head>
       <body className="min-h-screen bg-background font-sans antialiased max-w-xl mx-4 mt-8 sm:mx-auto">
         <ThemeProvider>
