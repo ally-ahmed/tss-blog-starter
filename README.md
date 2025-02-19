@@ -65,10 +65,9 @@ Currently using `vercel` as the deployment target in `tss-blog-starter`. To depl
 
 ## Roadmap
 
+- [ ] Tailwindcss v4
 - [ ] Use robots vite plugin
-- [ ] Scroll restoration
 - [ ] Dynamic OG image generation
-- [ ] Tailwind CSS V4
 - [ ] Finish up `On this page` component
 - [ ] Image optimisation
 - [ ] Font optimisation
