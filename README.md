@@ -6,7 +6,7 @@ A blog/portfolio starter project built with TanStack Start.
 
 ## Demo
 
-https://tss-blog-starter.pages.dev/
+https://tss-blog-starter.vercel.app/
 
 ## Features
 
