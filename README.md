@@ -59,7 +59,7 @@ pnpm dev
 
 ## Deployment
 
-Currently using cloudflare as the deployment target in `tss-blog-starter`. To deploy to other targets see [TanStack Start docs on deployment](https://tanstack.com/router/latest/docs/framework/react/start/hosting#deployment).
+Currently using `vercel` as the deployment target in `tss-blog-starter`. To deploy to other targets see [TanStack Start docs on deployment](https://tanstack.com/router/latest/docs/framework/react/start/hosting#deployment).
 
 ## Roadmap
 
