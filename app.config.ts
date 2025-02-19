@@ -3,18 +3,13 @@ import { defineConfig } from "@tanstack/start/config";
 import { FontaineTransform } from "fontaine";
 import path from "node:path";
 import { generateSitemap } from "tanstack-router-sitemap";
-import { cloudflare } from "unenv";
 import viteTsConfigPaths from "vite-tsconfig-paths";
 
 import { sitemap } from "./sitemap";
 
 export default defineConfig({
   server: {
-    preset: "cloudflare-pages",
-    unenv: cloudflare,
-    rollupConfig: {
-      external: ["node:async_hooks"],
-    },
+    preset: "vercel",
     prerender: {
       routes: ["/"],
       crawlLinks: true,
