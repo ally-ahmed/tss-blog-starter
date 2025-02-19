@@ -48,8 +48,10 @@ Clone project
 Install depndencies
 
 ```bash
-pnpm install
+pnpm install --frozen-lockfile
 ```
+
+To install dependencies that match the pnpm-lock.yaml
 
 Run app
 
